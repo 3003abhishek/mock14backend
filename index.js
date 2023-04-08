@@ -1,5 +1,5 @@
 const express=require("express");
-const {connection}=require("./db");
+const {connect}=require("./db");
 const { userRouter }=require("./routes/User.routes");
 
 let app=express();
@@ -15,7 +15,7 @@ app.use("/users",userRouter)
 app.listen(8080,async()=>{
 
     try{
-        await connection;
+        await connect();
         console.log("Connected to the db");
 
     }
