@@ -24,7 +24,7 @@ userRouter.post("/openaccount",async(req,res)=>{
 userRouter.get("/",async(req,res)=>{
     try{
         
-      users= await UserModel.find().maxTimeMS(30000);;
+      users= await UserModel.find();
       res.send(users);
     }
 
