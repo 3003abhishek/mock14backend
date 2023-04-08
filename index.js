@@ -1,6 +1,6 @@
 const express=require("express");
 const {connection}=require("./db");
-const { userRouter } = require("./routes/User.routes");
+const { userRouter }=require("./routes/User.routes");
 
 let app=express();
 
